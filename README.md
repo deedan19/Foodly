@@ -4,7 +4,7 @@ A food delivery application where users can browse through different local and i
 ## Language 
 - Swift 5
 ## Tools
-Xcode 9.3 compatible
+- Xcode 9.3 compatible
 - Firebase
 - Firestore
 ## Target Device 
