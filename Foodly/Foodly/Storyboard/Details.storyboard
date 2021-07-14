@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Bold.ttf">
+            <string>Poppins-Bold</string>
+        </array>
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Menu-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="DetailsVC" id="Y6W-OH-hqX" customClass="DetailsViewController" customModule="Foodly" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KRi-Ds-uF7">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <color key="backgroundColor" name="foodlyBackgroundColorMode"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Y6W-OH-hqX" id="wiA-sR-RIr"/>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="7qC-sq-wyn"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nhT-cS-s16">
+                                <rect key="frame" x="0.0" y="816" width="414" height="80"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="SNU-nO-44U">
+                                        <rect key="frame" x="17" y="18.5" width="380" height="43"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="51r-3P-O7y">
+                                                <rect key="frame" x="0.0" y="0.0" width="110" height="43"/>
+                                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="22"/>
+                                                <color key="textColor" red="1" green="0.99173018800000001" blue="0.99896076040000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sNn-O6-gnS">
+                                                <rect key="frame" x="135" y="0.0" width="110" height="43"/>
+                                                <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="22"/>
+                                                <state key="normal" title="View Cart">
+                                                    <color key="titleColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="viewCartButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="cBg-yN-k8q"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$20.49" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aiv-mR-lud">
+                                                <rect key="frame" x="270" y="0.0" width="110" height="43"/>
+                                                <color key="backgroundColor" red="0.48477613930000002" green="0.425460428" blue="0.96660166979999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="16"/>
+                                                <color key="textColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.42544659969999998" green="0.35771322249999998" blue="0.96347981689999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="SNU-nO-44U" firstAttribute="centerX" secondItem="nhT-cS-s16" secondAttribute="centerX" id="HhK-vI-LD6"/>
+                                    <constraint firstItem="SNU-nO-44U" firstAttribute="centerY" secondItem="nhT-cS-s16" secondAttribute="centerY" id="kxl-kv-QQn"/>
+                                    <constraint firstAttribute="width" constant="414" id="t4w-uC-i2i"/>
+                                    <constraint firstAttribute="height" constant="80" id="zLi-d0-cF1"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" name="foodlyBackgroundColorMode"/>
+                        <constraints>
+                            <constraint firstItem="nhT-cS-s16" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="EdW-Th-8dH"/>
+                            <constraint firstItem="KRi-Ds-uF7" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="IcD-nN-aNf"/>
+                            <constraint firstAttribute="bottom" secondItem="nhT-cS-s16" secondAttribute="bottom" id="Mvm-vf-sR0"/>
+                            <constraint firstItem="KRi-Ds-uF7" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="44" id="OAu-4q-Q1H"/>
+                            <constraint firstAttribute="trailing" secondItem="nhT-cS-s16" secondAttribute="trailing" id="RIh-V6-5KM"/>
+                            <constraint firstAttribute="bottom" secondItem="KRi-Ds-uF7" secondAttribute="bottom" id="nBK-SP-x69"/>
+                            <constraint firstItem="KRi-Ds-uF7" firstAttribute="trailing" secondItem="5EZ-qb-Rvc" secondAttribute="trailing" id="pQB-02-vJu"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Menu" id="3Kb-uW-qPL"/>
+                    <connections>
+                        <outlet property="cartView" destination="nhT-cS-s16" id="rFv-i8-ENF"/>
+                        <outlet property="numberOfItems" destination="51r-3P-O7y" id="FFV-CB-UFX"/>
+                        <outlet property="tableView" destination="KRi-Ds-uF7" id="qGz-HJ-Ov4"/>
+                        <outlet property="totalAmount" destination="Aiv-mR-lud" id="31x-sz-tUx"/>
+                        <outlet property="viewCartButton" destination="sNn-O6-gnS" id="6MS-lk-ae7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1010.144927536232" y="65.625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="foodlyBackgroundColorMode">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

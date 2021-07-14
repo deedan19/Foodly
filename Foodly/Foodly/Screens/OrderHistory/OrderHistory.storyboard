@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CC3-Bd-KSL">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--OrderHistoryVC-->
+        <scene sceneID="1xZ-oG-qWk">
+            <objects>
+                <viewController storyboardIdentifier="OrderHistoryViewController" id="BLw-RW-M0O" userLabel="OrderHistoryVC" customClass="OrderHistoryViewController" customModule="Foodly" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0jU-bG-iq2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kqi-BS-T3h">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <tabBar key="tableFooterView" contentMode="scaleToFill" id="c3S-ti-DS3">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <items/>
+                                </tabBar>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wWQ-67-C2N"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="kqi-BS-T3h" firstAttribute="top" secondItem="0jU-bG-iq2" secondAttribute="top" id="Yhg-rj-iqp"/>
+                            <constraint firstItem="kqi-BS-T3h" firstAttribute="leading" secondItem="0jU-bG-iq2" secondAttribute="leading" id="bmd-SF-zI9"/>
+                            <constraint firstAttribute="bottom" secondItem="kqi-BS-T3h" secondAttribute="bottom" id="djA-6h-P9M"/>
+                            <constraint firstAttribute="trailing" secondItem="kqi-BS-T3h" secondAttribute="trailing" id="iNh-QD-nBz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="g3r-Mh-ofx"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="oderHistoryTableView" destination="kqi-BS-T3h" id="6g0-D5-de2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qBf-TL-3qi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1050.7246376811595" y="121.875"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="3dJ-hO-PYU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CC3-Bd-KSL" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" image="bag" catalog="system" selectedImage="bag" id="BKJ-YU-vFG">
+                        <color key="badgeColor" red="0.42745098040000001" green="0.3803921569" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tNA-HA-2k5">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BLw-RW-M0O" kind="relationship" relationship="rootViewController" id="jTv-qF-m5q"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DnG-K7-7l9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140.57971014492756" y="121.875"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bag" catalog="system" width="128" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

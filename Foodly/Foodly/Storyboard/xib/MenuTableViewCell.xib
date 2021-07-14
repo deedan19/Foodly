@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="MenuTableViewCell" customModule="Foodly" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tMb-gk-7HB">
+                        <rect key="frame" x="20" y="12" width="45.5" height="20"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qX2-eX-8VF">
+                        <rect key="frame" x="222" y="11" width="77" height="22"/>
+                        <color key="tintColor" red="0.43137254901960786" green="0.50196078431372548" blue="0.69019607843137254" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <state key="normal" title="See More">
+                            <color key="titleColor" name="FoodlySmallLabelColorMode"/>
+                        </state>
+                        <connections>
+                            <action selector="seeMoreButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="H7m-de-H6a"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" name="foodlyBackgroundColorMode"/>
+                <constraints>
+                    <constraint firstItem="qX2-eX-8VF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="2Bd-ca-g82"/>
+                    <constraint firstAttribute="bottom" secondItem="qX2-eX-8VF" secondAttribute="bottom" constant="11" id="OJE-jR-UFe"/>
+                    <constraint firstItem="tMb-gk-7HB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="R4Q-z9-c24"/>
+                    <constraint firstItem="tMb-gk-7HB" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Rwo-oo-6HL"/>
+                    <constraint firstAttribute="trailing" secondItem="qX2-eX-8VF" secondAttribute="trailing" constant="21" id="d6L-ed-nje"/>
+                    <constraint firstItem="tMb-gk-7HB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="dfd-QO-TeJ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="searchBtn" destination="qX2-eX-8VF" id="qWE-1H-MxO"/>
+            </connections>
+            <point key="canvasLocation" x="24.637681159420293" y="79.6875"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="FoodlySmallLabelColorMode">
+            <color red="0.4309999942779541" green="0.50199997425079346" blue="0.68999999761581421" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="foodlyBackgroundColorMode">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

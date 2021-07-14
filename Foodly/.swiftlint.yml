@@ -1,0 +1,7 @@
+disabled_rules:
+- trailing_whitespace
+
+excluded:
+- Pods
+- AppDelegate.swift
+- Foodly/SceneDelegate.swift

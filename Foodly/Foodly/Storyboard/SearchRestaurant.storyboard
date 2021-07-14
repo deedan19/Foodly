@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bxw-0P-nOy">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search Restaurant View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="SearchRestaurantViewController" id="Y6W-OH-hqX" customClass="SearchRestaurantViewController" customModule="Foodly" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6sM-Nc-ndz">
+                                <rect key="frame" x="360" y="77" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="Ep3-Cf-coA"/>
+                                    <constraint firstAttribute="width" constant="30" id="dUU-Qk-lKB"/>
+                                    <constraint firstAttribute="height" constant="30" id="wl9-0y-dcS"/>
+                                </constraints>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="ion_options-outline">
+                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4eC-4v-MSK">
+                                <rect key="frame" x="10" y="128" width="394" height="597"/>
+                                <color key="backgroundColor" name="foodlyBackgroundColorMode"/>
+                                <color key="sectionIndexColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="hbJ-Nm-pHi">
+                                <rect key="frame" x="16" y="64" width="336" height="56"/>
+                                <color key="backgroundColor" name="foodlyBackgroundColorMode"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="ZNZ-Pv-VEi"/>
+                                </constraints>
+                                <color key="barTintColor" red="0.48477613930000002" green="0.425460428" blue="0.96660166979999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" name="foodlyBackgroundColorMode"/>
+                        <constraints>
+                            <constraint firstItem="hbJ-Nm-pHi" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="64" id="0dc-ha-19a"/>
+                            <constraint firstItem="6sM-Nc-ndz" firstAttribute="centerY" secondItem="hbJ-Nm-pHi" secondAttribute="centerY" id="16k-p2-hCr"/>
+                            <constraint firstItem="4eC-4v-MSK" firstAttribute="top" secondItem="hbJ-Nm-pHi" secondAttribute="bottom" constant="8" id="2cn-g3-6UZ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="6sM-Nc-ndz" secondAttribute="trailing" constant="24" id="Baj-vX-D9F"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="4eC-4v-MSK" secondAttribute="bottom" id="J3K-9V-uaW"/>
+                            <constraint firstItem="4eC-4v-MSK" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="10" id="Nnj-oc-keE"/>
+                            <constraint firstItem="hbJ-Nm-pHi" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="Rmu-No-wXq"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="4eC-4v-MSK" secondAttribute="trailing" constant="10" id="cUj-1H-kav"/>
+                            <constraint firstItem="hbJ-Nm-pHi" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="rK0-x3-rSr"/>
+                            <constraint firstItem="6sM-Nc-ndz" firstAttribute="leading" secondItem="hbJ-Nm-pHi" secondAttribute="trailing" constant="8" id="wzE-9C-fGQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="NwR-FD-Brg"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="searchBar" destination="hbJ-Nm-pHi" id="FVr-s9-BON"/>
+                        <outlet property="table" destination="4eC-4v-MSK" id="NdS-jd-Ovb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="944.92753623188412" y="55.580357142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="x2a-tp-Laj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bxw-0P-nOy" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="magnifyingglass" catalog="system" id="yad-5L-H1W"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Hrk-Ve-TA3">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="Xbc-3t-Lzr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k8F-fC-XQz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="55.580357142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ion_options-outline" width="24" height="24"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <namedColor name="foodlyBackgroundColorMode">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
